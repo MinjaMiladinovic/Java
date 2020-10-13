@@ -77,7 +77,16 @@ class BinarySearch implements SearchAlgorithm {
 
         Integer[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().boxed().toArray(Integer[]::new);
 
+    // Driver Program
+    public static void main(String[] args) {
+        // Just generate data
+        Random r = ThreadLocalRandom.current();
 
+        int size = 100;
+        int maxElement = 100000;
+
+        Integer[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().boxed().toArray(Integer[]::new);
+        
         // The element that should be found
         int shouldBeFound = integers[r.nextInt(size - 1)];
 
