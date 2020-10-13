@@ -196,28 +196,28 @@ public class SinglyLinkedList {
      * @return merged sorted list
      */
     public static SinglyLinkedList merge(SinglyLinkedList listA, SinglyLinkedList listB) {
-        Node headA = listA.head.next;
+        Node headZ = listA.head.next;
         Node headB = listB.head.next;
 
         int size = listA.size() + listB.size();
 
         Node head = new Node();
         Node tail = head;
-        while (headA != null && headB != null) {
-            if (headA.value <= headB.value) {
-                tail.next = headA;
-                headA = headA.next;
+        while (headZ != null && headB != null) {
+            if (headZ.value <= headB.value) {
+                tail.next = headZ;
+                headZ = headZ.next;
             } else {
                 tail.next = headB;
                 headB = headB.next;
             }
             tail = tail.next;
         }
-        if (headA == null) {
+        if (headZ == null) {
             tail.next = headB;
         }
         if (headB == null) {
-            tail.next = headA;
+            tail.next = headZ;
         }
         return new SinglyLinkedList(head, size);
     }
