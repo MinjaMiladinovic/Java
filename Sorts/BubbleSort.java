@@ -45,8 +45,8 @@ class BubbleSort implements SortAlgorithm {
         print(integers);
 
         // String Input
-        String[] strings = {"c", "a", "e", "b", "d", "f"};
-        //Output => a, b, c, d, e, f
+        String[] strings = {"c", "a", "e", "b", "d", "f", "g"};
+        //Output => a, b, c, d, e, f, g
         print(bubbleSort.sort(strings));
 
     }
