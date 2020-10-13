@@ -24,6 +24,10 @@ class BubbleSort implements SortAlgorithm {
             	if (greater(array[j], array[j + 1])) {
             		swap(array, j, j + 1);
             		swapped = true;
+                if (greater(array[j], array[j + 1])) {
+            		swap(array, j, j + 1);
+            		swapped = true;
+                }
                 }
             }
             if (!swapped) {
