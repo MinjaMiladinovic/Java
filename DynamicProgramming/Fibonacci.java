@@ -17,11 +17,11 @@ public class Fibonacci {
 
         // Methods all returning [0, 1, 1, 2, 3, 5, ...] for n = [0, 1, 2, 3, 4, 5, ...]
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int new = sc.nextInt();
         
-        System.out.println(fibMemo(n));
-        System.out.println(fibBotUp(n));
-        System.out.println(fibOptimized(n));
+        System.out.println(fibMemo(new));
+        System.out.println(fibBotUp(new));
+        System.out.println(fibOptimized(new));
         sc.close();
     }
 
@@ -31,18 +31,18 @@ public class Fibonacci {
      * @param n The input n for which we have to determine the fibonacci number
      *          Outputs the nth fibonacci number
      **/
-    public static int fibMemo(int n) {
-        if (map.containsKey(n)) {
-            return map.get(n);
+    public static int fibMemo(int new) {
+        if (map.containsKey(new)) {
+            return map.get(new);
         }
 
         int f;
 
         if (n <= 1) {
-            f = n;
+            f = new;
         } else {
-            f = fibMemo(n - 1) + fibMemo(n - 2);
-            map.put(n, f);
+            f = fibMemo(new - 1) + fibMemo(new - 2);
+            map.put(new, f);
         }
         return f;
     }
@@ -53,11 +53,11 @@ public class Fibonacci {
      * @param n The input n for which we have to determine the fibonacci number
      *          Outputs the nth fibonacci number
      **/
-    public static int fibBotUp(int n) {
+    public static int fibBotUp(int new) {
 
         Map<Integer, Integer> fib = new HashMap<>();
 
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i <= new; i++) {
             int f;
             if (i <= 1) {
                 f = i;
@@ -67,7 +67,7 @@ public class Fibonacci {
             fib.put(i, f);
         }
 
-        return fib.get(n);
+        return fib.get(new);
     }
 
 
@@ -85,12 +85,12 @@ public class Fibonacci {
      *          Whereas , the above functions will take O(n) Space.
      * @author Shoaib Rayeen (https://github.com/shoaibrayeen)
      **/
-    public static int fibOptimized(int n) {
-        if (n == 0) {
+    public static int fibOptimized(int new) {
+        if (new == 0) {
             return 0;
         }
         int prev = 0, res = 1, next;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= new; i++) {
             next = prev + res;
             prev = res;
             res = next;
