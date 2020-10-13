@@ -62,9 +62,7 @@ class BinarySearch implements SearchAlgorithm {
             return median;
         } else if (comp < 0) {
             return search(array, key, left, median - 1);
-        } else {
-            return search(array, key, median + 1, right);
-        }
+        } 
     }
 
     // Driver Program
