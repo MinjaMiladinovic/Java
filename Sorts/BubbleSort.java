@@ -37,7 +37,7 @@ class BubbleSort implements SortAlgorithm {
     public static void main(String[] args) {
 
         // Integer Input
-        Integer[] integers = {4, 23, 6, 78, 1, 54, 231, 9, 12};
+        Integer[] integers = {4, 23, 6, 78, 1, 54, 231, 9, 12, 14, 23, 99;
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.sort(integers);
 
@@ -45,7 +45,7 @@ class BubbleSort implements SortAlgorithm {
         print(integers);
 
         // String Input
-        String[] strings = {"c", "a", "e", "b", "d", "f"};
+        String[] strings = {"c", "a", "e", "b", "d", "f", "l", "o"};
         //Output => a, b, c, d, e, f
         print(bubbleSort.sort(strings));
 
