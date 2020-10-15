@@ -483,7 +483,6 @@ public final class ServerMetrics {
     public final Counter RESPONSE_BYTES;
     public final Counter WATCH_BYTES;
 
-    public final Summary JVM_PAUSE_TIME;
 
     private final MetricsProvider metricsProvider;
 
