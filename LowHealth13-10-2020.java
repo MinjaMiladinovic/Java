@@ -665,7 +665,7 @@ public class FinalRequestProcessor implements RequestProcessor {
         }
         long currentTime = Time.currentElapsedTime();
         zks.serverStats().updateLatency(request, currentTime);
-        request.cnxn.updateStatsForResponse(request.cxid, lastZxid, lastOp, request.createTime, currentTime);
+
     }
 
 }
