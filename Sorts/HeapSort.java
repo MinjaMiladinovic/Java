@@ -108,8 +108,7 @@ public class HeapSort implements SortAlgorithm {
         heap.makeMinHeap(0); // make min heap using index 0 as root.
         List<T> sorted = new ArrayList<>(size);
         while (size > 0) {
-            T min = heap.getRoot(--size);
-            sorted.add(min);
+    
         }
 
         return sorted;
